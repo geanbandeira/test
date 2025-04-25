@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Os Melhores Rankings | Ranking Definitivo dos Melhores em Tudo</title>
+  
+  <!-- Enhanced Meta Tags for 2025 SEO -->
+  <meta name="description" content="Rankings inteligentes com IA, atualizados em tempo real dos melhores produtos, serviços e experiências em todas as categorias.">
+  <meta name="keywords" content="melhores rankings, comparações inteligentes, avaliações 2025, recomendações personalizadas">
+  
+  <!-- Preload Critical Resources -->
+  <link rel="preload" href="/main.css" as="style">
+  <link rel="preload" href="/main.js" as="script">
+  <link rel="preload" href="/assets/fonts/Inter.woff2" as="font" type="font/woff2" crossorigin>
+  
+  <!-- AI-Powered Favicon that changes based on time/user preference -->
+  <link rel="icon" href="/assets/ai-favicon" type="image/svg+xml">
+  
+  <!-- Advanced PWA Manifest -->
+  <link rel="manifest" href="/app.webmanifest" crossorigin="use-credentials">
+  
+  <!-- Theme Color for Mobile -->
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121212" media="(prefers-color-scheme: dark)">
+  
+  <!-- Social Media Meta -->
+  <meta property="og:title" content="Os Melhores Rankings | IA de Recomendações 2025">
+  <meta property="og:description" content="Descubra os melhores produtos e serviços com nossa IA de comparação avançada.">
+  <meta property="og:image" content="https://osmelhoresrankings.com/assets/images/social/ai-social-preview.jpg">
+  <meta property="og:image:alt" content="Os Melhores Rankings - Plataforma Inteligente de Comparações">
+  
+  <!-- Twitter Card with Interactive Preview -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:creator" content="@melhoresrankings">
+  <meta name="twitter:image:alt" content="Interface moderna do Os Melhores Rankings">
+  
+  <!-- Preconnect to Critical Third Parties -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://api.osmelhoresrankings.com" crossorigin>
+  
+  <!-- AI-Powered Dynamic Font Loading -->
+  <script>
+    (function() {
+      const fontLoader = new FontFaceObserver('Inter');
+      const userPrefersPerformance = window.matchMedia('(prefers-reduced-data: reduce)').matches;
+      
+      if (!userPrefersPerformance) {
+        Promise.all([
+          fontLoader.load(),
+          new Promise(resolve => {
+            const link = document.createElement('link');
+            link.href = 'https://fonts.googleapis.com/css2?family=Inter:wght@300..900&display=swap';
+            link.rel = 'stylesheet';
+            link.onload = resolve;
+            document.head.appendChild(link);
+          })
+        ]).then(() => {
+          document.documentElement.classList.add('fonts-loaded');
+        });
+      }
+    })();
+  </script>
+  
+  <!-- Inline Critical CSS -->
+  <style>
+    :root {
+      --color-primary: #2563eb;
+      --color-primary-dark: #1d4ed8;
+      --color-secondary: #7c3aed;
+      --color-accent: #f59e0b;
+      --color-text: #1f2937;
+      --color-text-light: #6b7280;
+      --color-bg: #ffffff;
+      --color-bg-secondary: #f9fafb;
+      --color-border: #e5e7eb;
+      --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+      --shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+      --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      --rounded-sm: 0.125rem;
+      --rounded: 0.25rem;
+      --rounded-md: 0.375rem;
+      --rounded-lg: 0.5rem;
+      --rounded-xl: 0.75rem;
+      --rounded-full: 9999px;
+    }
+    
+    [data-theme="dark"] {
+      --color-primary: #3b82f6;
+      --color-primary-dark: #2563eb;
+      --color-secondary: #8b5cf6;
+      --color-accent: #f59e0b;
+      --color-text: #f3f4f6;
+      --color-text-light: #9ca3af;
+      --color-bg: #111827;
+      --color-bg-secondary: #1f2937;
+      --color-border: #374151;
+    }
+    
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 6rem;
+    }
+    
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: var(--color-text);
+      background-color: var(--color-bg);
+      line-height: 1.5;
+      overflow-x: hidden;
+    }
+    
+    .fonts-loaded body {
+      font-family: 'Inter', system-ui, sans-serif;
+    }
+    
+    /* Critical above-the-fold styles */
+    .app-loading {
+      position: fixed;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: var(--color-bg);
+      z-index: 9999;
+      transition: opacity 0.3s ease-out;
+    }
+    
+    .app-loading.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+    
+    .loading-spinner {
+      width: 3rem;
+      height: 3rem;
+      border: 3px solid var(--color-primary);
+      border-radius: var(--rounded-full);
+      border-top-color: transparent;
+      animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+  </style>
+  
+  <!-- AI Analytics with Privacy Focus -->
+  <script defer src="https://cdn.jsdelivr.net/npm/@ai-analytics/collector@3.2.1" 
+    data-token="omr_ai_2025" 
+    data-respect-dnt="true"
+    data-anonymize-ip="true"></script>
+</head>
+
+<body>
+  <!-- AI-Powered Loading Screen -->
+  <div class="app-loading" id="appLoading">
+    <div class="loading-spinner"></div>
+    <div class="loading-text" hidden>Analisando suas preferências...</div>
+  </div>
+  
+  <!-- Web Component for AI Assistant -->
+  <ai-assistant 
+    api-key="omr_ai_2025_public"
+    voice-enabled
+    visual-search
+    ar-preview
+    persona="ranking-expert">
+  </ai-assistant>
+  
+  <!-- Main App Shell -->
+  <div class="app-shell">
+    <!-- 3D Animated Header -->
+    <header class="main-header" id="mainHeader">
+      <div class="container">
+        <!-- Logo with Interactive 3D Element -->
+        <a href="/" class="brand-logo" aria-label="Os Melhores Rankings">
+          <ranking-logo interactive></ranking-logo>
+          <span>Os Melhores Rankings</span>
+        </a>
+        
+        <!-- AI-Powered Mega Menu -->
+        <ai-navigation 
+          class="main-nav" 
+          api-endpoint="/api/v1/navigation/ai"
+          user-context 
+          behavior="adaptive">
+        </ai-navigation>
+        
+        <!-- Voice Search Button -->
+        <button class="voice-search-btn" aria-label="Pesquisa por voz" id="voiceSearchBtn">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 1C10.3431 1 9 2.34315 9 4V12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12V4C15 2.34315 13.6569 1 12 1Z" fill="currentColor"/>
+            <path d="M5 11C5.55228 11 6 11.4477 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 11.4477 18.4477 11 19 11C19.5523 11 20 11.4477 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 11.4477 4.44772 11 5 11Z" fill="currentColor"/>
+            <path d="M12 19C12.5523 19 13 19.4477 13 20V23C13 23.5523 12.5523 24 12 24C11.4477 24 11 23.5523 11 23V20C11 19.4477 11.4477 19 12 19Z" fill="currentColor"/>
+          </svg>
+        </button>
+        
+        <!-- Theme Toggle with Animation -->
+        <button class="theme-toggle" aria-label="Alternar tema claro/escuro" id="themeToggle">
+          <span class="theme-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path class="sun" d="M12 18C15.3137 18 18 15.3137 18 12C18 8.68629 15.3137 6 12 6C8.68629 6 6 8.68629 6 12C6 15.3137 8.68629 18 12 18Z" fill="currentColor"/>
+              <path class="sun-beams" d="M12 3V1M12 23V21M5.63596 5.63604L4.22175 4.22183M19.778 19.7782L18.3638 18.364M3 12H1M23 12H21M5.63596 18.364L4.22175 19.7782M19.778 4.22183L18.3638 5.63604" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+              <path class="moon" d="M20.6147 14.6145C19.787 14.8653 18.9093 15.0001 18 15.0001C13.0294 15.0001 9 10.9707 9 6.00013C9 5.09088 9.13484 4.21311 9.3856 3.3855C5.69007 4.50571 3 7.93883 3 12.0001C3 16.9707 7.02944 21.0001 12 21.0001C16.0613 21.0001 19.4944 18.3101 20.6147 14.6145Z" fill="currentColor"/>
+            </svg>
+          </span>
+        </button>
+        
+        <!-- Mobile Menu Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Abrir menu mobile" aria-expanded="false" id="mobileMenuToggle">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </button>
+      </div>
+    </header>
+    
+    <!-- AI-Powered Hero Section with 3D Background -->
+    <section class="hero-section" aria-labelledby="heroHeading">
+      <div class="hero-canvas" id="heroCanvas"></div>
+      
+      <div class="hero-content">
+        <h1 id="heroHeading">Descubra os <span class="highlight">Melhores</span> com IA</h1>
+        <p class="hero-subtitle">Rankings inteligentes atualizados em tempo real para todas as categorias</p>
+        
+        <!-- AI-Powered Search with Visual Recognition -->
+        <ai-search-widget 
+          class="hero-search"
+          visual-search
+          voice-enabled
+          quick-results>
+        </ai-search-widget>
+        
+        <div class="hero-tags">
+          <span>Trending:</span>
+          <a href="/filmes/top-2025">Filmes 2025</a>
+          <a href="/celulares/comparar">Comparar Celulares</a>
+          <a href="/viagens/top-destinos">Destinos</a>
+          <a href="/tech/ia-gadgets">Gadgets de IA</a>
+        </div>
+      </div>
+      
+      <!-- Interactive Scroll Indicator -->
+      <div class="scroll-indicator" aria-hidden="true">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path d="M7 10L12 15L17 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </section>
+    
+    <!-- AI-Personalized Categories Grid -->
+    <section class="categories-section" aria-labelledby="categoriesHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="categoriesHeading">Explore Nossas Categorias</h2>
+          <p>Selecionadas especialmente para você</p>
+        </div>
+        
+        <ai-category-grid 
+          class="categories-grid"
+          user-id="current"
+          max-categories="12"
+          shuffle-enabled>
+        </ai-category-grid>
+      </div>
+    </section>
+    
+    <!-- Real-Time Trending Rankings -->
+    <section class="trending-section" aria-labelledby="trendingHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="trendingHeading">Rankings em Alta Agora</h2>
+          <p>Baseado em tendências e atividade dos usuários</p>
+        </div>
+        
+        <div class="trending-controls">
+          <button class="trending-filter active" data-filter="all">Todos</button>
+          <button class="trending-filter" data-filter="entertainment">Entretenimento</button>
+          <button class="trending-filter" data-filter="tech">Tecnologia</button>
+          <button class="trending-filter" data-filter="lifestyle">Estilo de Vida</button>
+          <button class="trending-filter" data-filter="business">Negócios</button>
+        </div>
+        
+        <real-time-rankings 
+          class="trending-rankings"
+          api-endpoint="/api/v1/rankings/trending"
+          update-interval="300"
+          max-items="6"
+          animation="slide">
+        </real-time-rankings>
+      </div>
+    </section>
+    
+    <!-- AI-Powered Comparison Tool -->
+    <section class="comparison-section" aria-labelledby="comparisonHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="comparisonHeading">Comparação Inteligente</h2>
+          <p>Nossa IA analisa milhares de dados para você</p>
+        </div>
+        
+        <ai-comparison-tool 
+          class="comparison-tool"
+          max-items="4"
+          categories-api="/api/v1/categories"
+          ar-preview>
+          
+          <div class="comparison-placeholder">
+            <h3>O que você gostaria de comparar?</h3>
+            <p>Comece digitando ou falando os itens para comparação</p>
+            <button class="voice-comparison-btn">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M12 1C10.3431 1 9 2.34315 9 4V12C9 13.6569 10.3431 15 12 15C13.6569 15 15 13.6569 15 12V4C15 2.34315 13.6569 1 12 1Z" fill="currentColor"/>
+                <path d="M5 11C5.55228 11 6 11.4477 6 12C6 15.3137 8.68629 18 12 18C15.3137 18 18 15.3137 18 12C18 11.4477 18.4477 11 19 11C19.5523 11 20 11.4477 20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 11.4477 4.44772 11 5 11Z" fill="currentColor"/>
+              </svg>
+              Iniciar comparação por voz
+            </button>
+          </div>
+        </ai-comparison-tool>
+      </div>
+    </section>
+    
+    <!-- Personalized Recommendations -->
+    <section class="recommendations-section" aria-labelledby="recommendationsHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="recommendationsHeading">Recomendados para Você</h2>
+          <p>Baseado no seu histórico e preferências</p>
+        </div>
+        
+        <ai-recommendations 
+          class="recommendations-grid"
+          user-id="current"
+          algorithm="hybrid"
+          max-items="6"
+          shuffle-enabled>
+        </ai-recommendations>
+      </div>
+    </section>
+    
+    <!-- Interactive Methodology Explanation -->
+    <section class="methodology-section" aria-labelledby="methodologyHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="methodologyHeading">Como Criamos Nossos Rankings</h2>
+          <p>Transparência e tecnologia de ponta</p>
+        </div>
+        
+        <interactive-methodology 
+          class="methodology-steps"
+          steps-api="/api/v1/methodology">
+        </interactive-methodology>
+      </div>
+    </section>
+    
+    <!-- AI-Powered Newsletter with Preference Detection -->
+    <section class="newsletter-section" aria-labelledby="newsletterHeading">
+      <div class="container">
+        <div class="newsletter-content">
+          <h2 id="newsletterHeading">Receba Rankings Personalizados</h2>
+          <p>Nossa IA envia apenas o que é relevante para você</p>
+          
+          <ai-newsletter-form 
+            class="newsletter-form"
+            interest-detection
+            frequency="smart">
+          </ai-newsletter-form>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Community Engagement Section -->
+    <section class="community-section" aria-labelledby="communityHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="communityHeading">Comunidade de Especialistas</h2>
+          <p>Conecte-se com outros entusiastas</p>
+        </div>
+        
+        <div class="community-grid">
+          <div class="community-card">
+            <h3>Fórum de Discussão</h3>
+            <p>Debata e compartilhe suas opiniões</p>
+            <a href="/comunidade/forum" class="btn-link">Participar</a>
+          </div>
+          
+          <div class="community-card">
+            <h3>Votações ao Vivo</h3>
+            <p>Influencie os rankings em tempo real</p>
+            <a href="/comunidade/votacoes" class="btn-link">Votar Agora</a>
+          </div>
+          
+          <div class="community-card">
+            <h3>Grupos por Interesse</h3>
+            <p>Conecte-se com pessoas similares</p>
+            <a href="/comunidade/grupos" class="btn-link">Explorar</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Augmented Reality Preview Section -->
+    <section class="ar-section" aria-labelledby="arHeading">
+      <div class="container">
+        <div class="section-header">
+          <h2 id="arHeading">Visualize em Realidade Aumentada</h2>
+          <p>Veja os produtos no seu ambiente antes de decidir</p>
+        </div>
+        
+        <ar-preview 
+          class="ar-preview-container"
+          api-endpoint="/api/v1/ar-models"
+          fallback-image="/assets/images/ar-fallback.jpg">
+          <div class="ar-fallback">
+            <p>Seu dispositivo não suporta realidade aumentada ou a câmera não está disponível.</p>
+            <button class="btn-outline">Ver imagens 360°</button>
+          </div>
+        </ar-preview>
+      </div>
+    </section>
+    
+    <!-- Advanced Footer with Interactive Elements -->
+    <footer class="main-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-col footer-about">
+            <a href="/" class="footer-logo">
+              <ranking-logo></ranking-logo>
+              <span>Os Melhores Rankings</span>
+            </a>
+            <p>Plataforma inteligente de comparações e rankings, alimentada por IA.</p>
+            
+            <ai-language-selector 
+              class="language-selector"
+              available-langs="pt-BR, en-US, es-ES">
+            </ai-language-selector>
+            
+            <div class="social-links">
+              <a href="#" aria-label="Instagram" data-social="instagram">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M12 16C14.2091 16 16 14.2091 16 12C16 9.79086 14.2091 8 12 8C9.79086 8 8 9.79086 8 12C8 14.2091 9.79086 16 12 16Z" fill="currentColor"/>
+                  <path d="M17 5H7C5.89543 5 5 5.89543 5 7V17C5 18.1046 5.89543 19 7 19H17C18.1046 19 19 18.1046 19 17V7C19 5.89543 18.1046 5 17 5Z" stroke="currentColor" stroke-width="2"/>
+                  <path d="M17.5 7.5H17.51" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="Twitter" data-social="twitter">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M23 3C22.0424 3.67548 20.9821 4.19211 19.86 4.53C19.2577 3.83751 18.4573 3.34669 17.567 3.12393C16.6767 2.90116 15.7395 2.9572 14.8821 3.28445C14.0247 3.61171 13.2884 4.1944 12.773 4.95372C12.2575 5.71303 11.9877 6.61234 12 7.53V8.53C10.2426 8.57557 8.50127 8.18581 6.93101 7.39545C5.36074 6.60508 4.01032 5.43864 3 4C3 4 -1 13 8 17C5.94053 18.398 3.48716 19.0989 1 19C10 24 21 19 21 7.5C20.9991 7.22145 20.9723 6.94359 20.92 6.67C21.9406 5.66349 22.6608 4.39271 23 3V3Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="YouTube" data-social="youtube">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M22.54 6.42C22.4213 5.94541 22.1793 5.51057 21.8387 5.15941C21.498 4.80824 21.0708 4.55318 20.6 4.42C18.88 4 12 4 12 4C12 4 5.12 4 3.4 4.46C2.92925 4.59318 2.50198 4.84824 2.16135 5.19941C1.82072 5.55057 1.57865 5.98541 1.46 6.46C1.14521 8.20556 0.991235 9.97631 1 11.75C0.991235 13.537 1.14521 15.3079 1.46 17.06C1.59096 17.5258 1.8383 17.9517 2.17814 18.2943C2.51799 18.6368 2.93842 18.8839 3.4 19.01C5.12 19.46 12 19.46 12 19.46C12 19.46 18.88 19.46 20.6 19.01C21.0708 18.8768 21.498 18.6218 21.8387 18.2706C22.1793 17.9194 22.4213 17.4846 22.54 17.01C22.852 15.2676 23.0059 13.5033 23 11.735C23.0059 9.9553 22.852 8.19097 22.54 6.42V6.42Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M9.75 15.02L15.5 11.75L9.75 8.48V15.02Z" fill="currentColor"/>
+                </svg>
+              </a>
+              <a href="#" aria-label="TikTok" data-social="tiktok">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <path d="M21 8C18.7909 8 17 6.20914 17 4V2H13V16C13 17.6569 11.6569 19 10 19C8.34315 19 7 17.6569 7 16C7 14.3431 8.34315 13 10 13H13V8C13 5.79086 14.7909 4 17 4H19V8H21Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Categorias</h3>
+            <ul>
+              <li><a href="/entretenimento">Entretenimento</a></li>
+              <li><a href="/tecnologia">Tecnologia</a></li>
+              <li><a href="/estilo-de-vida">Estilo de Vida</a></li>
+              <li><a href="/negocios">Negócios</a></li>
+              <li><a href="/esportes">Esportes</a></li>
+              <li><a href="/ciencia">Ciência</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Recursos</h3>
+            <ul>
+              <li><a href="/app">Aplicativo Móvel</a></li>
+              <li><a href="/extensao">Extensão Navegador</a></li>
+              <li><a href="/api">API para Desenvolvedores</a></li>
+              <li><a href="/widgets">Widgets</a></li>
+              <li><a href="/integracao">Integrações</a></li>
+              <li><a href="/ar">Realidade Aumentada</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-col">
+            <h3>Empresa</h3>
+            <ul>
+              <li><a href="/sobre">Sobre Nós</a></li>
+              <li><a href="/equipe">Nossa Equipe</a></li>
+              <li><a href="/carreiras">Carreiras</a></li>
+              <li><a href="/imprensa">Imprensa</a></li>
+              <li><a href="/parceiros">Parceiros</a></li>
+              <li><a href="/impacto">Impacto Social</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; <span id="currentYear"></span> Os Melhores Rankings. Todos os direitos reservados.</p>
+          
+          <div class="legal-links">
+            <a href="/privacidade">Privacidade</a>
+            <a href="/termos">Termos</a>
+            <a href="/cookies">Cookies</a>
+            <a href="/preferencias">Preferências</a>
+            <a href="/acessibilidade">Acessibilidade</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  
+  <!-- Web Components Loader -->
+  <script type="module">
+    // Load Web Components with feature detection
+    if ('customElements' in window) {
+      // Load core components first
+      import('/assets/js/components/core/ranking-logo.js');
+      import('/assets/js/components/core/ai-navigation.js');
+      import('/assets/js/components/core/ai-search-widget.js');
+      
+      // Then load interactive components
+      import('/assets/js/components/interactive/ai-recommendations.js');
+      import('/assets/js/components/interactive/real-time-rankings.js');
+      import('/assets/js/components/interactive/ai-comparison-tool.js');
+      
+      // Finally load advanced components
+      import('/assets/js/components/advanced/ai-assistant.js');
+      import('/assets/js/components/advanced/ar-preview.js');
+      import('/assets/js/components/advanced/interactive-methodology.js');
+    } else {
+      // Fallback for browsers without Web Components
+      document.write('<script src="/assets/js/legacy-bundle.js"><\/script>');
+    }
+  </script>
+  
+  <!-- Main App JavaScript -->
+  <script src="/assets/js/main.js" type="module"></script>
+  
+  <!-- WebGL and 3D Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/loaders/GLTFLoader.min.js"></script>
+  
+  <!-- WebAssembly Modules -->
+  <script>
+    if (typeof WebAssembly === 'object') {
+      // Load WASM modules for heavy computations
+      const wasmLoader = async () => {
+        const wasm = await fetch('/assets/wasm/ranking-algorithm.wasm');
+        const buffer = await wasm.arrayBuffer();
+        const module = await WebAssembly.compile(buffer);
+        const instance = await WebAssembly.instantiate(module);
+        
+        // Make available to components
+        window.rankingWASM = instance.exports;
+      };
+      
+      wasmLoader().catch(console.error);
+    }
+  </script>
+  
+  <!-- Service Worker Registration -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => {
+            console.log('ServiceWorker registration successful');
+          })
+          .catch(err => {
+            console.log('ServiceWorker registration failed: ', err);
+          });
+      });
+    }
+  </script>
+</body>
+</html>
